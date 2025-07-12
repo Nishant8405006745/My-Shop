@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+
+{% block body %}  
+
+
+
+
+<div class="container"> <img src="https://5.imimg.com/data5/QN/CD/MY-927781/telephone-instrument-500x500.jpeg" class="rounded mx-auto d-block" alt="..."> </div>
+
+<div class="container my-4" >
+    <h1 class="container text-center"> Contact Us</h1>
+
+
+
+
+    <form method="POST" action="/contact/">
+
+
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name.">
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mobile no.</label>
+        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter Mobile no.">
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email Address.">
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+        <textarea class="form-control" id="text" name="text" rows="3"></textarea>
+      </div>
+    
+      <button type="button" class="btn btn-primary">Submit</button>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
